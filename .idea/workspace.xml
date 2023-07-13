@@ -3,4 +3,113 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/api/getClients.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/api/getThingInStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/components/DashboardAdminBody.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/components/DashboardAdminComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/components/MainMenuAdmin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/routes/DashboardAdmin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/routes/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/api/createThingInStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/api/deleteThingInStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/api/getThingInStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/api/getThingType.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/components/ManageThingDataGrid.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/authentification/api/register.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/api/register.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/authentification/components/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/components/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/authentification/components/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/components/RegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/api/getAvailableThingInStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientdashboard/api/getUserThings.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/api/getClientThingInStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientBody.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/MainMenuClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientdashboard/components/MainMenuClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/api/getThingInStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/api/getThingType.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/api/purchaseThingInStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/components/ClientThingInStoreDataGrid.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/getThingInStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/api/getThingInStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/getThingType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/api/getThingType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/startClientThing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/api/startClientThing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/stopClientThing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/api/stopClientThing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/components/ClientThingsDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/components/ClientThingsDataGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/protectedadmin.tsx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2SW8KWn3kwfpnlXgtkosXenlx2s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="run" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="" />
+      <created>1689250915187</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689250915187</updated>
+      <workItem from="1689250916584" duration="6577000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
 </project>

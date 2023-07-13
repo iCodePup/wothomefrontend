@@ -4,25 +4,23 @@ import Paper from "@mui/material/Paper";
 
 import {Alert, CircularProgress} from "@mui/material";
 import {useUser} from "@/lib/auth";
-import {useAvailableThingsInStore} from "@/features/clientdashboard/api/getAvailableThingInStore";
-import {useClientThings} from "@/features/clientdashboard/api/getClientThingInStore";
+import {useUserThing} from "@/features/clientdashboard/api/getUserThings";
+
 
 
 export default function DashboardClientBody() {
 
-    const thingsInStoreAvailableQuery = useAvailableThingsInStore();
-    const clientThingsAvailableQuery = useClientThings();
+    const userThings = useUserThing();
     const auth = useUser();
 
-    if (thingsInStoreAvailableQuery.isLoading || clientThingsAvailableQuery.isLoading ||  auth.isLoading) {
+    if (userThings.isLoading ||  auth.isLoading) {
         return (
             <div className="w-full h-48 flex justify-center items-center">
                 <CircularProgress size="lg"/>
             </div>
         );
     }
-    if (!thingsInStoreAvailableQuery.data) return null;
-    if (!clientThingsAvailableQuery.data) return null;
+    if (!userThings.data) return null;
     if (!auth.data) return null;
 
     return (<Grid container spacing={3}>
@@ -30,8 +28,8 @@ export default function DashboardClientBody() {
         {/* Nb d'objets à la vente */}
         <Grid item xs={12}>
             <Paper sx={{p: 2, display: 'flex', flexDirection: 'column'}}>
-                <div>Bonjour {auth.data.firstName} {auth.data.lastName}. Bienvenue sur la boutique d'objet connecté
-                    WOTStore
+                <div>Bonjour {auth.data.firstName} {auth.data.lastName}. Bienvenue sur votre plateforme d'objet connecté
+                    WOTHome
                 </div>
             </Paper>
         </Grid>
@@ -44,9 +42,9 @@ export default function DashboardClientBody() {
                     height: 240,
                 }}
             >
-                <Alert severity="info">Nombre d'objets à la vente : {thingsInStoreAvailableQuery.data.length}</Alert>
-                <p></p>
-                <Alert severity="success">Mes objets connectés : {clientThingsAvailableQuery.data.length}</Alert>
+                <Alert severity="info">TODO recherches des objets connectés...page de base liste (datagrid) de mes objets connectés avec possibilité de leur choisir une piece en mode edition +fenetere de recherche avec websocket</Alert>
+
+
 
             </Paper>
         </Grid>

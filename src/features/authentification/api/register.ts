@@ -7,7 +7,7 @@ export type RegisterCredentialsDTO = {
 };
 
 export const registerWithEmailAndPassword = (data: RegisterCredentialsDTO): Promise<any> => {
-        return axios.post('/client/create', data).catch(error => console.error(error))
+        return axios.post('/user/create', data).catch(error => console.error(error))
 
     }
 ;

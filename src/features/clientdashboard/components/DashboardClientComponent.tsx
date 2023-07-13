@@ -25,7 +25,7 @@ function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
-            WOTStore-GLG204-
+            WOTHome-GLG204-
             {new Date().getFullYear()}
             {'.'}
         </Typography>
@@ -135,7 +135,7 @@ export default function DashboardClientComponent({onLogout}: LogoutProps) {
                             noWrap
                             sx={{flexGrow: 1}}
                         >
-                            Dashboard
+                            Tableau de bord
                         </Typography>
                         <IconButton color="inherit" onClick={logoutCb}>
                             <LogoutOutlined/>

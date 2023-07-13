@@ -17,7 +17,7 @@ function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
-            WOTStore-GLG204-
+            WOTHome-GLG204-
             {new Date().getFullYear()}
             {'.'}
         </Typography>

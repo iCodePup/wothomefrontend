@@ -3,7 +3,6 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import {frFR, GridActionsCellItem} from "@mui/x-data-grid";
 import FullFeaturedCrudGrid from "@/components/datagrid";
-import {useThingTypes} from "@/features/clientthinginstore/api/getThingType";
 import {CircularProgress} from "@mui/material";
 import ReadOnlyToolbar from "@/components/datagrid/ReadOnlyToolbar";
 import Dialog from "@mui/material/Dialog";
@@ -21,7 +20,6 @@ import {useStopClientThing} from "@/features/clientthings/api/stopClientThing";
 
 export function ClientThingsDataGrid() {
 
-    const thingTypesQuery = useThingTypes();
     const clientThings = useClientThings();
     const startClientThingMutation = useStartClientThing();
     const stopClientThingMutation = useStopClientThing();
@@ -29,7 +27,7 @@ export function ClientThingsDataGrid() {
     const [openStop, setOpenStop] = React.useState(false);
     const [currentRow, setRow] = React.useState();
 
-    if (clientThings.isLoading || thingTypesQuery.isLoading) {
+    if (clientThings.isLoading) {
         return (
             <div className="w-full h-48 flex justify-center items-center">
                 <CircularProgress size="lg"/>
@@ -37,7 +35,6 @@ export function ClientThingsDataGrid() {
         );
     }
     if (!clientThings.data) return null;
-    if (!thingTypesQuery.data) return null;
 
     const columns = [
         {
@@ -47,7 +44,7 @@ export function ClientThingsDataGrid() {
             headerAlign: "center",
             type: "singleSelect",
             align: "center",
-            valueOptions: thingTypesQuery.data,
+            valueOptions: [],
             editable: false,
         },
         {

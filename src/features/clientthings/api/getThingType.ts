@@ -1,7 +1,7 @@
 import {axios} from "@/lib/axios";
-import {ThingType} from "@/features/clientthinginstore/types";
 import {ExtractFnReturnType, QueryConfig} from "@/lib/react-query";
 import {useQuery} from "@tanstack/react-query";
+import { ThingType } from "../types";
 
 export const getThingTypes = (): Promise<ThingType[]> => {
     return axios.get('/thing/type');

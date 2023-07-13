@@ -3,10 +3,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import House from '@mui/icons-material/House';
 import EmojiObjects from '@mui/icons-material/EmojiObjects';
+import AccountTree from '@mui/icons-material/AccountTree';
 import DashboardClientBody from './DashboardClientBody';
-import {ClientThingInStoreDataGrid} from '@/features/clientthinginstore/components/ClientThingInStoreDataGrid';
 import {ClientThingsDataGrid} from "@/features/clientthings/components/ClientThingsDataGrid";
 
 
@@ -23,12 +23,12 @@ export function MainMenuClient({updateBody}) {
             <ListItemText primary="Accueil"/>
         </ListItemButton>
         <ListItemButton onClick={(event) => {
-            updateBody(<ClientThingInStoreDataGrid/>)
+            updateBody(<ClientThingsDataGrid/>)
         }}>
             <ListItemIcon>
-                <ShoppingCartIcon/>
+                <House/>
             </ListItemIcon>
-            <ListItemText primary="Consulter la boutique"/>
+            <ListItemText primary="Plan de maison"/>
         </ListItemButton>
         <ListItemButton onClick={(event) => {
             updateBody(<ClientThingsDataGrid/>)
@@ -36,7 +36,15 @@ export function MainMenuClient({updateBody}) {
             <ListItemIcon>
                 <EmojiObjects/>
             </ListItemIcon>
-            <ListItemText primary="Mes objets connectés"/>
+            <ListItemText primary="Ma maison connecté"/>
+        </ListItemButton>
+        <ListItemButton onClick={(event) => {
+            updateBody(<ClientThingsDataGrid/>)
+        }}>
+            <ListItemIcon>
+                <AccountTree/>
+            </ListItemIcon>
+            <ListItemText primary="Scénario domotique"/>
         </ListItemButton>
     </React.Fragment>)
 }

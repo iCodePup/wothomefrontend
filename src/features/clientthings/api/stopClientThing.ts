@@ -1,8 +1,8 @@
 import {axios} from "@/lib/axios";
 import {useNotificationStore} from "@/stores/notifications";
 import {useMutation} from "@tanstack/react-query";
-import {ThingInStore} from "@/features/adminmanagethings/types";
 import {MutationConfig, queryClient} from "@/lib/react-query";
+import { ThingInStore } from "../types";
 
 
 export const stopClientThing = (t: ThingInStore): Promise<boolean> => {
