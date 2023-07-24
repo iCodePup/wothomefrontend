@@ -1,9 +1,9 @@
 import {axios} from "@/lib/axios";
 import {ExtractFnReturnType, QueryConfig} from "@/lib/react-query";
 import {useQuery} from "@tanstack/react-query";
-import {ThingInStore} from "@/features/clientthings/types";
+import {Thing} from "@/features/discoverthings/types";
 
-export const getUserThings = (): Promise<ThingInStore[]> => {
+export const getUserThings = (): Promise<Thing[]> => {
     return axios.get('/user/thing');
 };
 

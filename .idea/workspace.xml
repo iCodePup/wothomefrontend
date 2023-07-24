@@ -4,43 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="">
+    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="init wothome frontend">
+      <change afterPath="$PROJECT_DIR$/src/features/houseplan/api/addRoom.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/houseplan/api/deleteRoom.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/houseplan/api/getRooms.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/houseplan/components/HousePlanDataGrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/houseplan/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/userdashboard/components/DashboardUserBody.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/userdashboard/routes/DashboardUser.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/userthings/components/UserThingsDataGrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/protectedUser.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/api/getClients.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/api/getThingInStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/components/DashboardAdminBody.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/components/DashboardAdminComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/components/MainMenuAdmin.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/routes/DashboardAdmin.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/admindashboard/routes/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/api/createThingInStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/api/deleteThingInStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/api/getThingInStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/api/getThingType.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/components/ManageThingDataGrid.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/adminmanagethings/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/authentification/api/register.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/api/register.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/authentification/components/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/components/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/authentification/components/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/components/RegisterForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/api/getAvailableThingInStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientdashboard/api/getUserThings.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/api/getClientThingInStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientBody.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/MainMenuClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientdashboard/components/MainMenuClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/api/getThingInStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/api/getThingType.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/api/purchaseThingInStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/components/ClientThingInStoreDataGrid.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthinginstore/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/getThingInStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/api/getThingInStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/getThingType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/api/getThingType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/startClientThing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/api/startClientThing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/stopClientThing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/api/stopClientThing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/clientthings/components/ClientThingsDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/clientthings/components/ClientThingsDataGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/api/getUserThings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userthings/api/getUserThings.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientBody.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/DashboardClientComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/components/DashboardUserComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/components/MainMenuClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/components/MainMenuUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/routes/DashboardClient.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientdashboard/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/getThingInStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/getThingType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/discoverthings/api/getThings.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/startClientThing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/discoverthings/api/addClientThing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/api/stopClientThing.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/components/ClientThingsDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/discoverthings/components/DiscoveredThingsDataGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/clientthings/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/discoverthings/types/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/protectedadmin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/protectedclient.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +60,9 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/src/features/houseplan",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,6 +72,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/features/houseplan" />
+      <recent name="$PROJECT_DIR$/src/features/userthings/api" />
+      <recent name="$PROJECT_DIR$/src/features/clientthings" />
+      <recent name="$PROJECT_DIR$/src/features" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="run" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -101,12 +100,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689250915187</updated>
-      <workItem from="1689250916584" duration="6577000" />
+      <workItem from="1689250916584" duration="7612000" />
+      <workItem from="1689613636811" duration="1199000" />
+      <workItem from="1689674301105" duration="3925000" />
+      <workItem from="1689783060256" duration="2822000" />
+      <workItem from="1689939621840" duration="5406000" />
     </task>
+    <task id="LOCAL-00001" summary="init wothome frontend">
+      <created>1689260341159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689260341159</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init wothome frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="init wothome frontend" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
