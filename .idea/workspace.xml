@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="houseplan wip">
-      <change afterPath="$PROJECT_DIR$/src/features/homeautomation/components/HomeAutomation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/homeautomation/components/House.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/homeautomation/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/houseplan/api/updateRoom.ts" afterDir="false" />
+    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="houseplan done">
+      <change afterPath="$PROJECT_DIR$/src/features/homeautomation/api/getRooms.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/houseplan/api/addRoom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/houseplan/api/addRoom.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/houseplan/api/deleteRoom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/houseplan/api/deleteRoom.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/houseplan/components/HousePlanDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/houseplan/components/HousePlanDataGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/houseplan/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/houseplan/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/userdashboard/components/MainMenuUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/components/MainMenuUser.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/userthings/components/UserThingsDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userthings/components/UserThingsDataGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/components/HomeAutomation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/components/HomeAutomation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/components/House.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/components/House.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +42,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/src/features/homeautomation",
+    "last_opened_file_path": "/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/src/features/homeautomation/api",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,11 +54,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/features/homeautomation/api" />
       <recent name="$PROJECT_DIR$/src/features/homeautomation" />
       <recent name="$PROJECT_DIR$/src/features/houseplan/api" />
       <recent name="$PROJECT_DIR$/src/features/houseplan" />
       <recent name="$PROJECT_DIR$/src/features/userthings/api" />
-      <recent name="$PROJECT_DIR$/src/features/clientthings" />
     </key>
   </component>
   <component name="RunManager">
@@ -98,6 +90,8 @@
       <workItem from="1690365577763" duration="10472000" />
       <workItem from="1690440992221" duration="171000" />
       <workItem from="1690787093889" duration="11494000" />
+      <workItem from="1690807373145" duration="433000" />
+      <workItem from="1690814478805" duration="4286000" />
     </task>
     <task id="LOCAL-00001" summary="init wothome frontend">
       <created>1689260341159</created>
@@ -113,16 +107,26 @@
       <option name="project" value="LOCAL" />
       <updated>1690185497499</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="houseplan done">
+      <created>1690807699019</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690807699019</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="init wothome frontend" />
     <MESSAGE value="houseplan wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="houseplan wip" />
+    <MESSAGE value="houseplan done" />
+    <option name="LAST_COMMIT_MESSAGE" value="houseplan done" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

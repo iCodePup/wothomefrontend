@@ -1,10 +1,8 @@
-export interface Room {
+import {Thing} from "@/features/discoverthings/types";
+
+export type Room = {
+    id: number;
     name: string;
     surface: number;
     things: Thing[];
-}
-
-export interface Thing {
-    name: string;
-    icon: string; // URL to the Mui icon image
-}
+};
