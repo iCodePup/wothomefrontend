@@ -64,7 +64,7 @@ export function UserThingsDataGrid() {
     return (<Grid container spacing={3}>
         <Grid item xs={12}>
                 <Typography variant="subtitle1" gutterBottom>
-                    Mes objets connectées:
+                    Mes objets connectés:
                 </Typography>
                 <FullFeaturedCrudGrid
                     readOnly={true}

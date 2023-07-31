@@ -8,6 +8,7 @@ import EmojiObjects from '@mui/icons-material/EmojiObjects';
 import AccountTree from '@mui/icons-material/AccountTree';
 import DashboardUserBody from './DashboardUserBody';
 import {HousePlanDataGrid} from "@/features/houseplan/components/HousePlanDataGrid";
+import HomeAutomation from '@/features/homeautomation/components/HomeAutomation';
 
 
 // @ts-ignore
@@ -31,12 +32,12 @@ export function MainMenuUser({updateBody}) {
             <ListItemText primary="Plan de maison"/>
         </ListItemButton>
         <ListItemButton onClick={(event) => {
-            updateBody(<DashboardUserBody/>)
+            updateBody(<HomeAutomation/>)
         }}>
             <ListItemIcon>
                 <EmojiObjects/>
             </ListItemIcon>
-            <ListItemText primary="Ma maison connecté"/>
+            <ListItemText primary="Ma maison connectée"/>
         </ListItemButton>
         <ListItemButton onClick={(event) => {
             updateBody(<DashboardUserBody/>)

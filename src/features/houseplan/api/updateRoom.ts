@@ -11,17 +11,17 @@ export type RoomDTO = {
     thingsId: [];
 };
 
-export const addRoom = (data: RoomDTO): Promise<any> => {
-    return axios.post('/houseplan/room', data);
+export const updateRoom = (data: RoomDTO): Promise<any> => {
+    return axios.put('/houseplan/room', data);
 };
 
-type UseAddRoomOptions = {
-    config?: MutationConfig<typeof addRoom>;
+type UseUpdateRoomOptions = {
+    config?: MutationConfig<typeof updateRoom>;
 };
 
-export const useAddRoom = ({config}: UseAddRoomOptions = {}) => {
+export const useUpdateRoom = ({config}: UseUpdateRoomOptions = {}) => {
     const {addNotification} = useNotificationStore();
-    const mutation = useMutation<Room, any, RoomDTO>(addRoom, {
+    const mutation = useMutation<Room, any, RoomDTO>(updateRoom, {
         onMutate: async (newRoom) => {
             await queryClient.cancelQueries(['rooms']);
             const previousRoom = queryClient.getQueryData<Room[]>(['rooms']);
@@ -45,7 +45,7 @@ export const useAddRoom = ({config}: UseAddRoomOptions = {}) => {
             queryClient.invalidateQueries(['rooms']);
             addNotification({
                 type: 'success',
-                title: "La pièce est créée",
+                title: "La pièce est sauvegardée",
             });
         },
         ...config

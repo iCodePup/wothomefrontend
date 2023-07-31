@@ -6,7 +6,7 @@ import {MutationConfig, queryClient} from "@/lib/react-query";
 
 
 export const deleteRoom = (id: number): Promise<boolean> => {
-        return axios.delete('/houseplan/room' + id)
+        return axios.delete('/houseplan/room/' + id)
     }
 ;
 
