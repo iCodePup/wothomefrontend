@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Box, Modal, Tooltip, Typography} from '@mui/material';
 import {Room} from "@/features/homeautomation/types";
-import DeviceUnknownIcon from '@mui/icons-material/DeviceUnknown';
-import {Thing} from "@/features/discoverthings/types";
+import { ThingInfo } from './ThingInfo';
 
 interface HouseProps {
     rooms: Room[];
@@ -30,33 +29,7 @@ const getProportionalDimensions = (surface: number): Dimensions => {
 
 
 const House: React.FC<HouseProps> = ({rooms}) => {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = (thing: Thing) => () => {
-        //faireune requete vers l'url..
-        if (thing.alive) {
-            //thing.url
-            //recuperer la liste des propriétés et la rnager dansun objet properties quisera affiché dansla modal
-        }
-        setOpen(true);
-    }
-    const handleClose = () => setOpen(false);
 
-    const getIcon = (thing: Thing) => {
-
-        return <DeviceUnknownIcon onClick={handleOpen(thing)}/>
-    }
-
-    const modalStyle = {
-        position: 'absolute' as 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
-    };
 
     return (
         <Box display="flex" flexDirection="column" alignItems="center" paddingTop="80px">
@@ -92,33 +65,15 @@ const House: React.FC<HouseProps> = ({rooms}) => {
                                     </Typography>
                                     <div style={{display: 'flex', marginTop: '2px'}}>
                                         {room.things ? room.things.map((thing, index) => (
-                                            <div key={index} style={{marginRight: '2px', position: 'relative'}}>
-                                                <Tooltip title={thing.name}>
-                                                    {getIcon(thing)}
-                                                </Tooltip>
 
-                                            </div>
+                                            <ThingInfo thing={thing} index={index}/>
+
                                         )) : null}
                                     </div>
                                 </div>
                             </div>
                         );
                     })}
-                    <Modal
-                        open={open}
-                        onClose={handleClose}
-                        aria-labelledby="modal-modal-title"
-                        aria-describedby="modal-modal-description"
-                    >
-                        <Box sx={modalStyle}>
-                            <Typography id="modal-modal-title" variant="h6" component="h2">
-                                Text in a modal
-                            </Typography>
-                            <Typography id="modal-modal-description" sx={{mt: 2}}>
-                                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                            </Typography>
-                        </Box>
-                    </Modal>
                 </Box>
             </Box>
         </Box>

@@ -6,3 +6,9 @@ export type Room = {
     surface: number;
     things: Thing[];
 };
+
+export type ThingInfo = {
+    id: number;
+    name: string;
+    surface: number;
+};
