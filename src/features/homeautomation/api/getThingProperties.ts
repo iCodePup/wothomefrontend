@@ -1,9 +1,7 @@
-import {axios} from "@/lib/axios";
 import {ExtractFnReturnType, QueryConfig} from "@/lib/react-query";
 import {useQuery} from "@tanstack/react-query";
-import {Thing} from "@/features/discoverthings/types";
+import {ThingInfo, ThingProperties} from "@/features/homeautomation/types";
 import Axios from "axios";
-import {ThingInfo} from "@/features/homeautomation/types";
 
 //create new axios instance for requesting Things to bypass context interceptor
 export const instance = Axios.create({
@@ -17,23 +15,24 @@ instance.interceptors.response.use(function (response) {
     return {};
 });
 
-export const getThingInfo = (uri: string |undefined): Promise<ThingInfo> | null => {
-    if(uri) {
-        return instance.get(uri);
+export const getThingProperties = (uri: string | undefined): Promise<ThingProperties> | null => {
+    if (uri) {
+        return instance.get(uri + "/properties");
     }
     return null
 };
 
-type QueryFnType = typeof getThingInfo;
+type QueryFnType = typeof getThingProperties;
 
-type UseThingInfoOptions = {
+type UseThingPropertiesOptions = {
     config?: QueryConfig<QueryFnType>;
 };
 
-export const useThingInfo = (uri: string | undefined, {config}: UseThingInfoOptions = {}) => {
+export const useThingProperties = (uri: string | undefined, {config}: UseThingPropertiesOptions = {}) => {
     return useQuery<ExtractFnReturnType<QueryFnType>>({
         ...config,
-        queryKey: ['thinginfo_'+uri],
-        queryFn: () => getThingInfo(uri)
+        queryKey: ['thingproperties_' + uri],
+        queryFn: () => getThingProperties(uri),
+        refetchInterval: 5000,//polling 5s
     });
 };
