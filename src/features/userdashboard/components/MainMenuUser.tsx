@@ -9,6 +9,7 @@ import AccountTree from '@mui/icons-material/AccountTree';
 import DashboardUserBody from './DashboardUserBody';
 import {HousePlanDataGrid} from "@/features/houseplan/components/HousePlanDataGrid";
 import HomeAutomation from '@/features/homeautomation/components/HomeAutomation';
+import Scene from '@/features/scene/components/Scene';
 
 
 // @ts-ignore
@@ -40,7 +41,7 @@ export function MainMenuUser({updateBody}) {
             <ListItemText primary="Ma maison connectée"/>
         </ListItemButton>
         <ListItemButton onClick={(event) => {
-            updateBody(<DashboardUserBody/>)
+            updateBody(<Scene/>)
         }}>
             <ListItemIcon>
                 <AccountTree/>
