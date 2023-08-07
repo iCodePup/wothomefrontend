@@ -1,11 +1,13 @@
 import * as React from 'react';
-import {Badge, Box, CircularProgress, Modal, Tooltip, Typography} from "@mui/material";
+import {Badge, Box, Button, CircularProgress, Modal, Tooltip, Typography} from "@mui/material";
 import {Thing} from "@/features/discoverthings/types";
 import DeviceUnknownIcon from "@mui/icons-material/DeviceUnknown";
 import {useThingInfo} from "@/features/homeautomation/api/getThingInfo";
 import {useThingProperties} from "@/features/homeautomation/api/getThingProperties";
 import {DeviceThermostat, Lightbulb, ThermostatAuto, ToggleOn, Vibration} from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
+import {ThingProperties, ValueType} from "@/features/homeautomation/types";
+import {useUpdateThingProperty} from "@/features/homeautomation/api/updateThingProperty";
 
 
 export function ThingInfo({thing, index}: { thing: Thing; index: number }) {
@@ -13,6 +15,9 @@ export function ThingInfo({thing, index}: { thing: Thing; index: number }) {
     // @ts-ignore
     const thingInfo = useThingInfo(thing.url);
     const thingProperties = useThingProperties(thing.url);
+    const updateThingProperty = useUpdateThingProperty(thing.url);
+    const [formData, setFormData] = React.useState<ThingProperties>({});
+
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = (thing: Thing) => () => {
@@ -75,18 +80,66 @@ export function ThingInfo({thing, index}: { thing: Thing; index: number }) {
         // @ts-ignore
         if (thingProperties.data) {
             // @ts-ignore
-            const keys: string[] = Object.keys(thingProperties.data.data);
-            // @ts-ignore
-            const values: string[] = Object.values(thingProperties.data.data);
-            const divElements = values.map((value: string, index: number) => {
+            if (thingProperties.data.data) {
                 // @ts-ignore
-                return <Tooltip title={keys[index].replace("Property", "").replace(/([A-Z])/g, " $1").trim()}>
-                    <div style={{fontSize: "10px"}} key={index}>{value}</div>
-                </Tooltip>;
-            });
-            return <div>{divElements}</div>;
+                const keys: string[] = Object.keys(thingProperties.data.data);
+                // @ts-ignore
+                const values: string[] = Object.values(thingProperties.data.data);
+
+                const divElements = values.map((value: string | boolean | number, index: number) => {
+                    // @ts-ignore
+                    let text: string | boolean | number;
+                    if (value === false) {
+                        text = "off";
+                    } else if (value === true) {
+                        text = "on";
+                    } else {
+                        text = value
+                    }
+
+                    return <Tooltip title={keys[index].replace("Property", "").replace(/([A-Z])/g, " $1").trim()}>
+                        <div style={{fontSize: "10px"}} key={index}>{text}</div>
+                    </Tooltip>;
+                });
+                return <div>{divElements}</div>;
+            }
         }
         return "?"
+    }
+
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if (formData) {
+
+            const key = Object.keys(formData)[0];
+            const value = Object.values(formData)[0] as string;
+            if (key && value) {
+                const newObj = {
+                    [key]: parseValue(value)
+                };
+                updateThingProperty.mutate(newObj);
+            }
+        }
+    }
+
+    const parseValue = (input: string): ValueType => {
+        console.log("parseValue")
+        console.log(input)
+        if (/^(\-|\+)?([0-9]+(\.[0-9]+)?)$/.test(input)) {
+            return parseFloat(input);
+        } else if (input.toLowerCase() === 'true' || input.toLowerCase() === 'false') {
+            return input.toLowerCase() === 'true';
+        } else {
+            return input;
+        }
+    }
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const {name, value} = event.target;
+        if (value) {
+            setFormData({[name]: value});
+        }
     }
 
     const getModalForm = () => {
@@ -100,19 +153,28 @@ export function ThingInfo({thing, index}: { thing: Thing; index: number }) {
                 // @ts-ignore
                 let name = keys[index].replace("Property", "").replace(/([A-Z])/g, " $1").trim();
                 // @ts-ignore
-                return <Box component="form" //onSubmit={handleSubmit}
+                return <Box component="form" onSubmit={(event) => handleSubmit(event)}
                             sx={{mt: 1}}>
                     <TextField
                         margin="normal"
-                        required={true}
+                        required={false}
                         fullWidth
                         id={keys[index]}
                         label={name}
-                        name={name}
+                        name={keys[index]}
                         autoFocus
-                        value={value}
-                    />
+                        defaultValue={value}
+                        onChange={handleInputChange}
+                    /> <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{mt: 3, mb: 2}}
+                >
+                    Valider
+                </Button>
                 </Box>
+
             });
             return <div>{form}</div>;
         }

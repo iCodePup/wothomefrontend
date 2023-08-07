@@ -14,7 +14,11 @@ export type ThingInfo = {
     properties: ThingProperties;
 };
 
+export type ValueType = number | boolean | string;
+
+
 export type ThingProperties = {};
+
 
 // {
 //     "security": "nosec_sc",

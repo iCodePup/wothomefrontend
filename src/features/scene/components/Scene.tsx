@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {ReactNode, useState} from 'react';
 import {
     Button,
     Dialog,
@@ -9,6 +9,7 @@ import {
     InputLabel,
     MenuItem,
     Select,
+    SelectChangeEvent,
     TextField,
 } from '@mui/material';
 
@@ -49,7 +50,7 @@ const PropertySelector: React.FC<{
     properties: Property[];
     onSelect: (property: Property) => void;
 }> = ({properties, onSelect}) => {
-    const handleSelect = (event: React.ChangeEvent<{ value: unknown }>) => {
+    const handleSelect = (event: SelectChangeEvent<unknown>, child: ReactNode) => {
         const selectedPropertyName = event.target.value as string;
         const selectedProperty = properties.find(property => property.name === selectedPropertyName) || null;
         if (selectedProperty) {
@@ -58,10 +59,10 @@ const PropertySelector: React.FC<{
     };
 
 
+
     return (
         <FormControl>
             <InputLabel>Select Property</InputLabel>
-            // @ts-ignore
             <Select onChange={handleSelect} value="">
                 {properties.map((property) => (
                     <MenuItem key={property.name} value={property.name}>
@@ -76,7 +77,7 @@ const PropertySelector: React.FC<{
 const ItemSelector: React.FC<{
     onSelect: (item: Item) => void;
 }> = ({onSelect}) => {
-    const handleSelect = (event: React.ChangeEvent<{ value: unknown }>) => {
+    const handleSelect = (event: SelectChangeEvent<unknown>, child: ReactNode) => {
         const selectedItemName = event.target.value as string;
         const selectedItem = AvailableItems.find(item => item.name === selectedItemName) || null;
         if (selectedItem) {
@@ -143,6 +144,7 @@ const ASTNodeComponent: React.FC<{ node: ASTNode }> = ({node}) => {
                 ),
             };
             node.children.push(newItem);
+            // @ts-ignore
             node.children.push(selectedOperator);
             setSelectedItem(null);
             setSelectedProperty(null);
