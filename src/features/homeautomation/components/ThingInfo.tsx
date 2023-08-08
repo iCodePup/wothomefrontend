@@ -111,7 +111,6 @@ export function ThingInfo({thing, index}: { thing: Thing; index: number }) {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if (formData) {
-
             const key = Object.keys(formData)[0];
             const value = Object.values(formData)[0] as string;
             if (key && value) {
@@ -124,8 +123,6 @@ export function ThingInfo({thing, index}: { thing: Thing; index: number }) {
     }
 
     const parseValue = (input: string): ValueType => {
-        console.log("parseValue")
-        console.log(input)
         if (/^(\-|\+)?([0-9]+(\.[0-9]+)?)$/.test(input)) {
             return parseFloat(input);
         } else if (input.toLowerCase() === 'true' || input.toLowerCase() === 'false') {

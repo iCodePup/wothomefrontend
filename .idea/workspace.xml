@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="wip House plan automation">
-      <change afterPath="$PROJECT_DIR$/src/features/homeautomation/api/updateThingProperty.ts" afterDir="false" />
+    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment=" House plan automation done, scene wip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/homeautomation/components/ThingInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/components/ThingInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/components/Scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/Scene.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,7 @@
       <workItem from="1691067735806" duration="3848000" />
       <workItem from="1691132623854" duration="12000" />
       <workItem from="1691152833946" duration="297000" />
-      <workItem from="1691410615977" duration="9484000" />
+      <workItem from="1691410615977" duration="9653000" />
     </task>
     <task id="LOCAL-00001" summary="init wothome frontend">
       <created>1689260341159</created>
@@ -146,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691077326912</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=" House plan automation done, scene wip">
+      <option name="closed" value="true" />
+      <created>1691421584354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691421584354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +164,8 @@
     <MESSAGE value="houseplan wip" />
     <MESSAGE value="houseplan done" />
     <MESSAGE value="wip House plan automation" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip House plan automation" />
+    <MESSAGE value=" House plan automation done, scene wip" />
+    <option name="LAST_COMMIT_MESSAGE" value=" House plan automation done, scene wip" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
