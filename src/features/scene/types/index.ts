@@ -1,20 +1,16 @@
 import {Thing} from "@/features/discoverthings/types";
 
-export type Room = {
-    id: number;
-    name: string;
-    surface: number;
-    things: Thing[];
-};
 
-export type ThingInfo = {
-    id: number;
-    title: string;
-    type: [];
-    properties: ThingProperties;
-};
+export type Expression ={
+    type: string;
+    firstExpression?: Expression;
+    secondExpression?: Expression;
+    thingDTO: Thing;
+    property?: string;
+    value?: string;
+}
 
-export type ThingProperties = {};
+
 
 // {
 //     "security": "nosec_sc",

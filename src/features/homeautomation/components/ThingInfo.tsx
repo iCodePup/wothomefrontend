@@ -143,37 +143,40 @@ export function ThingInfo({thing, index}: { thing: Thing; index: number }) {
         // @ts-ignore
         if (thingProperties.data) {
             // @ts-ignore
-            const keys: string[] = Object.keys(thingProperties.data.data);
-            // @ts-ignore
-            const values: string[] = Object.values(thingProperties.data.data);
-            const form = values.map((value: string, index: number) => {
+            if (thingProperties.data.data) {
                 // @ts-ignore
-                let name = keys[index].replace("Property", "").replace(/([A-Z])/g, " $1").trim();
+                const keys: string[] = Object.keys(thingProperties.data.data);
                 // @ts-ignore
-                return <Box component="form" onSubmit={(event) => handleSubmit(event)}
-                            sx={{mt: 1}}>
-                    <TextField
-                        margin="normal"
-                        required={false}
+                const values: string[] = Object.values(thingProperties.data.data);
+                const form = values.map((value: string, index: number) => {
+                    // @ts-ignore
+                    let name = keys[index].replace("Property", "").replace(/([A-Z])/g, " $1").trim();
+                    // @ts-ignore
+                    return <Box component="form" onSubmit={(event) => handleSubmit(event)}
+                                sx={{mt: 1}}>
+                        <TextField
+                            margin="normal"
+                            required={false}
+                            fullWidth
+                            id={keys[index]}
+                            label={name}
+                            name={keys[index]}
+                            autoFocus
+                            defaultValue={value}
+                            onChange={handleInputChange}
+                        /> <Button
+                        type="submit"
                         fullWidth
-                        id={keys[index]}
-                        label={name}
-                        name={keys[index]}
-                        autoFocus
-                        defaultValue={value}
-                        onChange={handleInputChange}
-                    /> <Button
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    sx={{mt: 3, mb: 2}}
-                >
-                    Valider
-                </Button>
-                </Box>
+                        variant="contained"
+                        sx={{mt: 3, mb: 2}}
+                    >
+                        Valider
+                    </Button>
+                    </Box>
 
-            });
-            return <div>{form}</div>;
+                });
+                return <div>{form}</div>;
+            }
         }
         return "?"
     }
