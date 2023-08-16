@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
-import {Box, Modal, Tooltip, Typography} from '@mui/material';
+import React from 'react';
+import {Box, Typography} from '@mui/material';
 import {Room} from "@/features/homeautomation/types";
-import { ThingInfo } from './ThingInfo';
+import {ThingInfo} from './ThingInfo';
 
 interface HouseProps {
     rooms: Room[];

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 interface ExpressionOrOperator {
     type: "thing" | "and" | "or";
@@ -10,6 +10,7 @@ interface ExpressionOrOperator {
 }
 
 interface ExpressionProps {
+    thingsWithProperties: any
     expression: ExpressionOrOperator;
     onChange: (updatedExpression: ExpressionOrOperator) => void;
 }
@@ -55,7 +56,7 @@ const updateExpression = (
     ) {
         return updatedExpression
 
-    }  else {
+    } else {
         return targetExpression;
     }
 };
@@ -101,7 +102,17 @@ const handleOperatorChange = (
     }
 };
 
-const ExpressionComponent: React.FC<ExpressionProps> = ({expression, onChange}) => {
+const ExpressionComponent: React.FC<ExpressionProps> = ({thingsWithProperties, expression, onChange}) => {
+
+    useEffect(() => {
+        // @ts-ignore
+        const selectedThing = thingsWithProperties.find(item => item.thing.id == expression.thingId);
+        if (selectedThing) {
+            expression.property = selectedThing.properties[0] || ''
+        }
+    }, [expression.thingId]);
+
+
     return (
         <div>
             {expression && (
@@ -120,9 +131,8 @@ const ExpressionComponent: React.FC<ExpressionProps> = ({expression, onChange}) 
             {expression?.type === "thing" ? (
                 <div>
                     <label>
-                        Thing ID:
-                        <input
-                            type="number"
+                        &nbsp;Objet connecté:
+                        <select
                             value={expression.thingId || ''}
                             onChange={(e) =>
                                 onChange({
@@ -130,12 +140,19 @@ const ExpressionComponent: React.FC<ExpressionProps> = ({expression, onChange}) 
                                     thingId: parseInt(e.target.value, 10),
                                 })
                             }
-                        />
+                        >
+                            {thingsWithProperties.map((item: any) => (
+                                <option key={item.thing.id} value={item.thing.id}>
+                                    {item.thing.name}
+                                </option>
+                            ))}
+                        </select>
                     </label>
+
                     <label>
-                        Property:
-                        <input
-                            type="text"
+                        &nbsp;Propriété de l'objet:
+                        <select
+                            name="actionDTO.property"
                             value={expression.property || ''}
                             onChange={(e) =>
                                 onChange({
@@ -143,10 +160,25 @@ const ExpressionComponent: React.FC<ExpressionProps> = ({expression, onChange}) 
                                     property: e.target.value,
                                 })
                             }
-                        />
+                        >
+                            {
+
+                                thingsWithProperties
+                                    .find((item: { thing: { id: number; }; }) => {
+                                        return item.thing.id == expression.thingId
+                                    })
+                                    ?.properties.map((property: string) => {
+                                    return (<option key={property} value={property}>
+                                        {property}
+                                    </option>)
+                                })
+
+
+                            }
+                        </select>
                     </label>
                     <label>
-                        Value:
+                        &nbsp;Valeur:
                         <input
                             type="text"
                             value={expression.value || ''}
@@ -163,12 +195,14 @@ const ExpressionComponent: React.FC<ExpressionProps> = ({expression, onChange}) 
                 <div>
                     <div>
                         <ExpressionComponent
+                            thingsWithProperties={thingsWithProperties}
                             expression={expression.firstExpression as ExpressionOrOperator}
                             onChange={(updatedExpression) =>
                                 onChange(updateExpression(expression, updatedExpression, true))
                             }
                         />
                         <ExpressionComponent
+                            thingsWithProperties={thingsWithProperties}
                             expression={expression.secondExpression as ExpressionOrOperator}
                             onChange={(updatedExpression) =>
                                 onChange(updateExpression(expression, updatedExpression, false))

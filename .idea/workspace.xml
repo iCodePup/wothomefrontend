@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment=" House plan automation clean">
-      <change afterPath="$PROJECT_DIR$/src/features/scene/api/getScenes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/scene/components/ExpressionComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/scene/components/SceneDataGrid.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/scene/components/SceneForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/scene/components/SceneToolbar.js" afterDir="false" />
+    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="wip  ExpressionComponent.tsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/components/ThingInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/components/ThingInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/api/getThingInfo.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/api/getThingProperties.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/components/Scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/Scene.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/userdashboard/components/DashboardUserComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/components/DashboardUserComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/userdashboard/components/MainMenuUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/components/MainMenuUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/components/House.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/components/House.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/scene/components/ExpressionComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/ExpressionComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/scene/components/SceneForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/SceneForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +105,7 @@
       <workItem from="1691509587344" duration="1464000" />
       <workItem from="1691571268013" duration="697000" />
       <workItem from="1691593023904" duration="662000" />
-      <workItem from="1692083777296" duration="25556000" />
+      <workItem from="1692083777296" duration="32823000" />
     </task>
     <task id="LOCAL-00001" summary="init wothome frontend">
       <created>1689260341159</created>
@@ -174,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691488426056</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="wip  ExpressionComponent.tsx">
+      <option name="closed" value="true" />
+      <created>1692112924429</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1692112924430</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +188,8 @@
     <MESSAGE value="wip House plan automation" />
     <MESSAGE value=" House plan automation done, scene wip" />
     <MESSAGE value=" House plan automation clean" />
-    <option name="LAST_COMMIT_MESSAGE" value=" House plan automation clean" />
+    <MESSAGE value="wip  ExpressionComponent.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip  ExpressionComponent.tsx" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
