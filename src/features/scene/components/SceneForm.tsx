@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import ExpressionComponent from './ExpressionComponent';
 import {useThingProperties} from "@/features/homeautomation/api/getThingProperties";
 import {Thing} from "@/features/discoverthings/types";
+import {useAddClientThing} from "@/features/discoverthings/api/addClientThing";
+import {useAddRule} from "@/features/scene/api/addRule";
+import { Button } from '@mui/material';
 
 interface Action {
     thingId: number;
@@ -31,6 +34,8 @@ export function ListThingsProperties(url: string | undefined) {
 
 export function SceneForm({things}: { things: any }) {
 
+    const addRule = useAddRule();
+
     const thingsWithProperties = things.data.map((thing: Thing) => {
         return {
             thing,
@@ -58,28 +63,51 @@ export function SceneForm({things}: { things: any }) {
     ) => {
         const {name, value} = event.target;
 
-        // Map the input element names to the corresponding keys in the state
-        const mapping: { [key: string]: string } = {
-            'actionDTO.thingId': 'thingId',
-            'actionDTO.property': 'property',
-            'actionDTO.value': 'value',
-        };
+        if (name === 'name') {
+            setFormValues((prevValues) => ({
+                ...prevValues,
+                name: value,
+            }));
+        } else {
+            const [parentField, childField] = name.split('.');
 
-        const stateKey = mapping[name];
 
-        setFormValues((prevValues) => ({
-            ...prevValues,
-            actionDTO: {
-                ...prevValues.actionDTO,
-                [stateKey]: value,
-            },
-        }));
+            setFormValues((prevValues) => ({
+                ...prevValues,
+                [parentField]: {
+                    // @ts-ignore
+                    ...prevValues[parentField],
+                    [childField]: value,
+                },
+            }));
+        }
     };
+
+    const transformJsonForm = (obj: any) => {
+        const transformedObj = {};
+        for (const key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                if (key === "thingId") {
+                    // @ts-ignore
+                    transformedObj.thingDTO = {id: obj[key]};
+                } else if (typeof obj[key] === "object") {
+                    // @ts-ignore
+                    transformedObj[key] = transformJsonForm(obj[key]);
+                } else {
+                    // @ts-ignore
+                    transformedObj[key] = obj[key];
+                }
+            }
+        }
+        return transformedObj;
+    }
+
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        const jsonStructure = JSON.stringify(formValues, null, 2);
-        console.log(jsonStructure);
+        const json: {} = transformJsonForm(formValues)
+        console.log(json);
+        addRule.mutateAsync(json)
     };
 
     const handleTriggerExpressionChange = (
@@ -110,7 +138,18 @@ export function SceneForm({things}: { things: any }) {
     return (
         <form onSubmit={handleSubmit}>
             <p>
-                Si (Règle) :
+                <label>
+                    Nom: &nbsp;
+                    <input
+                        type="text"
+                        name="name"
+                        value={formValues.name}
+                        onChange={handleInputChange}
+                    />
+                </label>
+            </p>
+            <p>
+                <b>Si (Règle):</b>&nbsp;
                 <ExpressionComponent
                     thingsWithProperties={thingsWithProperties}
                     expression={formValues.triggerExpressionDTO}
@@ -118,7 +157,7 @@ export function SceneForm({things}: { things: any }) {
                 />
             </p>
             <p>
-                Alors (action) :
+                <b>Alors (action):</b>&nbsp;
                 <br/>
                 <label>
                     Objet connecté:
@@ -136,7 +175,7 @@ export function SceneForm({things}: { things: any }) {
                 </label>
                 <br/>
                 <label>
-                    Propriété de l'objet:
+                    Propriété de l'objet:&nbsp;
                     <select
                         name="actionDTO.property"
                         value={formValues.actionDTO.property}
@@ -160,7 +199,7 @@ export function SceneForm({things}: { things: any }) {
                 </label>
                 <br/>
                 <label>
-                    Valeur:
+                    Valeur:&nbsp;
                     <input
                         type="text"
                         name="actionDTO.value"
@@ -171,7 +210,7 @@ export function SceneForm({things}: { things: any }) {
             </p>
             <p>
 
-                <button type="submit">Generate JSON</button>
+                <Button type="submit">Ajouter la règle</Button>
             </p>
         </form>
     );

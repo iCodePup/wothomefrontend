@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import {frFR, GridActionsCellItem} from "@mui/x-data-grid";
+import {frFR} from "@mui/x-data-grid";
 import FullFeaturedCrudGrid from "@/components/datagrid";
 import {CircularProgress} from "@mui/material";
 import ReadOnlyToolbar from "@/components/datagrid/ReadOnlyToolbar";

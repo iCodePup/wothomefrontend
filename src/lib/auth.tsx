@@ -1,17 +1,15 @@
 import {configureAuth} from 'react-query-auth';
 
 import {
-    loginWithEmailAndPassword,
+    AuthUser,
     getUser,
+    LoginCredentialsDTO,
+    loginWithEmailAndPassword,
+    RegisterCredentialsDTO,
     registerWithEmailAndPassword,
     UserResponse,
-    LoginCredentialsDTO,
-    RegisterCredentialsDTO,
-    AuthUser,
 } from '@/features/authentification';
 import storage from '@/utils/storage';
-import React from "react";
-import {CircularProgress} from "@mui/material";
 
 async function handleUserResponse(data: UserResponse) {
     const {jwt, user} = data;

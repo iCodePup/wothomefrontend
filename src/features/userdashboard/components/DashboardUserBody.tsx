@@ -2,7 +2,7 @@ import * as React from 'react';
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 
-import {Alert, CircularProgress} from "@mui/material";
+import {CircularProgress} from "@mui/material";
 import {useUser} from "@/lib/auth";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -11,6 +11,7 @@ import Modal from '@mui/material/Modal';
 import {DiscoveredThingsDataGrid} from "@/features/discoverthings/components/DiscoveredThingsDataGrid";
 import {UserThingsDataGrid} from "@/features/userthings/components/UserThingsDataGrid";
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+
 export default function DashboardUserBody() {
 
     const auth = useUser();

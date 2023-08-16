@@ -1,4 +1,3 @@
-import {axios} from "@/lib/axios";
 import {useNotificationStore} from "@/stores/notifications";
 import {useMutation} from "@tanstack/react-query";
 import {queryClient} from "@/lib/react-query";

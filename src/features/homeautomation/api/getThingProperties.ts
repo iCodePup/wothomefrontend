@@ -1,6 +1,6 @@
 import {ExtractFnReturnType, QueryConfig} from "@/lib/react-query";
 import {useQuery} from "@tanstack/react-query";
-import {ThingInfo, ThingProperties} from "@/features/homeautomation/types";
+import {ThingProperties} from "@/features/homeautomation/types";
 import Axios from "axios";
 
 //create new axios instance for requesting Things to bypass context interceptor

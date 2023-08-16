@@ -4,8 +4,6 @@ import {CircularProgress} from "@mui/material";
 import {useRooms} from "@/features/homeautomation/api/getRooms";
 
 
-
-
 // const rooms = [
 //     {
 //         name: 'Living Room',

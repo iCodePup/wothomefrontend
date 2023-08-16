@@ -1,12 +1,9 @@
 import * as React from "react";
 import {
-    GridRowModes,
+    GridCsvExportMenuItem,
     GridToolbarColumnsButton,
     GridToolbarContainer,
-    GridToolbarDensitySelector,
     GridToolbarExportContainer,
-    GridCsvExportMenuItem,
-    // GridPrintExportMenuItem,
     GridToolbarFilterButton,
     GridToolbarQuickFilter
 } from "@mui/x-data-grid";
@@ -14,7 +11,6 @@ import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import {Modal} from "@mui/material";
 import Box from "@mui/material/Box";
-import {DiscoveredThingsDataGrid} from "@/features/discoverthings/components/DiscoveredThingsDataGrid";
 import Scene from "@/features/scene/components/Scene";
 
 function SceneToolbar(props) {

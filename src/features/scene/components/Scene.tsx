@@ -4,7 +4,6 @@ import {SceneForm} from "@/features/scene/components/SceneForm";
 import {CircularProgress} from "@mui/material";
 
 
-
 const Scene: React.FC = () => {
 
     const things = useUserThing();

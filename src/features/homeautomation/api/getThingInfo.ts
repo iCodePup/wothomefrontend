@@ -1,7 +1,5 @@
-import {axios} from "@/lib/axios";
 import {ExtractFnReturnType, QueryConfig} from "@/lib/react-query";
 import {useQuery} from "@tanstack/react-query";
-import {Thing} from "@/features/discoverthings/types";
 import Axios from "axios";
 import {ThingInfo} from "@/features/homeautomation/types";
 

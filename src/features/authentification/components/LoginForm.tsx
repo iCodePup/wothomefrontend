@@ -10,7 +10,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import {LoginCredentialsDTO, loginWithEmailAndPassword} from "@/features/authentification/api/login";
+import {LoginCredentialsDTO} from "@/features/authentification/api/login";
 import {useLogin} from "@/lib/auth";
 
 function Copyright(props: any) {

@@ -16,7 +16,7 @@ import {LogoutOutlined} from '@mui/icons-material';
 import {useLogout} from "@/lib/auth";
 
 import DashboardUserBody from "@/features/userdashboard/components/DashboardUserBody";
-import { MainMenuUser } from './MainMenuUser';
+import {MainMenuUser} from './MainMenuUser';
 
 function Copyright(props: any) {
     return (
