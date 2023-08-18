@@ -64,23 +64,6 @@ async function logoutFn() {
 }
 
 
-//TODO refresh token....
-//https://github.com/Flyrell/axios-auth-refresh
-
-
-const authConfig = {
-    userFn,
-    loginFn,
-    registerFn,
-    logoutFn,
-};
-//
-// const { useUser, useLogin, useRegister, useLogout } = configureAuth({
-//     userFn: () => api.get('/me'),
-//     loginFn: (credentials) => api.post('/login', credentials),
-//     registerFn: (credentials) => api.post('/register', credentials),
-//     logoutFn: () => api.post('/logout'),
-// });
 
 
 export const {AuthLoader, useUser, useLogin, useRegister, useLogout} = configureAuth<

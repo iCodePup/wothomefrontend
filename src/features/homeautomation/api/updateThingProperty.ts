@@ -14,6 +14,7 @@ export const useUpdateThingProperty = (uri: string | undefined) => {
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)
             };
+            console.log(data)
             return fetch(uri + '/properties/' + propertyUri, requestOptions)
                 .then(response => response.json())
         },

@@ -4,30 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="todo : update json thingDTo.id before post rule">
-      <change afterPath="$PROJECT_DIR$/src/features/scene/api/addRule.ts" afterDir="false" />
+    <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="post rule : done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/datagrid/DefaultToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/datagrid/DefaultToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/datagrid/ReadOnlyToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/datagrid/ReadOnlyToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/datagrid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/datagrid/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/authentification/components/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/components/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/api/getThingInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/api/getThingInfo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/api/getThingProperties.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/api/getThingProperties.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/homeautomation/api/updateThingProperty.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/api/updateThingProperty.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/homeautomation/components/HomeAutomation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/components/HomeAutomation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/components/Scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/Scene.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/components/SceneDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/SceneDataGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/components/SceneForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/SceneForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/scene/components/SceneToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/SceneToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/userdashboard/components/DashboardUserBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/components/DashboardUserBody.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/userdashboard/components/DashboardUserComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/components/DashboardUserComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/userdashboard/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userdashboard/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/userthings/components/UserThingsDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userthings/components/UserThingsDataGrid.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/react-query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/react-query.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/axios.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,25 +35,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/src/features/scene/api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/src/features/scene/api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/features/scene/api" />
@@ -124,7 +105,9 @@
       <workItem from="1691509587344" duration="1464000" />
       <workItem from="1691571268013" duration="697000" />
       <workItem from="1691593023904" duration="662000" />
-      <workItem from="1692083777296" duration="37022000" />
+      <workItem from="1692083777296" duration="38297000" />
+      <workItem from="1692372093064" duration="1018000" />
+      <workItem from="1692373717064" duration="550000" />
     </task>
     <task id="LOCAL-00001" summary="init wothome frontend">
       <created>1689260341159</created>
@@ -200,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692176455425</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="post rule : done">
+      <option name="closed" value="true" />
+      <created>1692197431434</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692197431434</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +219,8 @@
     <MESSAGE value=" House plan automation clean" />
     <MESSAGE value="wip  ExpressionComponent.tsx" />
     <MESSAGE value="todo : update json thingDTo.id before post rule" />
-    <option name="LAST_COMMIT_MESSAGE" value="todo : update json thingDTo.id before post rule" />
+    <MESSAGE value="post rule : done" />
+    <option name="LAST_COMMIT_MESSAGE" value="post rule : done" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
