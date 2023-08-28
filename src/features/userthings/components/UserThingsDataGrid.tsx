@@ -48,6 +48,11 @@ export function UserThingsDataGrid() {
             type: "string",
             align: "center",
             editable: false,
+            renderCell: ({value}: { value: any }) => {
+                if (value) {
+                    return (<a href={value} target="_blank">{value}</a>)
+                }
+            }
         },
         {
             field: "alive",

@@ -23,6 +23,10 @@ export const useUpdateThingProperty = (uri: string | undefined) => {
             return {thing};
         },
         onError: (error, _, context: any) => {
+            addNotification({
+                type: 'error',
+                title: "Cette propriété ne respecte pas le bon format.",
+            });
             if (context?.previousThingInStore) {
                 queryClient.setQueryData(['thingproperties_' + uri], context.previousThingInStore);
             }

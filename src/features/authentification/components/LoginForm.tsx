@@ -77,6 +77,7 @@ export default function LoginForm({onSuccess}: LoginFormProps) {
                             id="email"
                             label="Email"
                             name="email"
+                            type={"email"}
                             autoComplete="email"
                             autoFocus
                             onChange={handleInputChange}

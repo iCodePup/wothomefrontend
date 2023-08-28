@@ -1,10 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ExpressionComponent from './ExpressionComponent';
-import {useThingProperties} from "@/features/homeautomation/api/getThingProperties";
-import {Thing} from "@/features/discoverthings/types";
-import {useAddClientThing} from "@/features/discoverthings/api/addClientThing";
 import {useAddRule} from "@/features/scene/api/addRule";
-import { Button } from '@mui/material';
+import {Button} from '@mui/material';
 
 interface Action {
     thingId: number;
@@ -19,29 +16,9 @@ interface FormValues {
 }
 
 
-export function ListThingsProperties(url: string | undefined) {
-    const thingProps: any = useThingProperties(url);
-    if (thingProps) {
-        if (thingProps.data) {
-            if (thingProps.data.data) {
-                return Object.keys(thingProps.data.data);
-            }
-        }
-    }
-    return [];
-}
-
-
-export function SceneForm({things}: { things: any }) {
+export function SceneForm({things, thingsWithProperties}: { things: any, thingsWithProperties: any }) {
 
     const addRule = useAddRule();
-
-    const thingsWithProperties = things.data.map((thing: Thing) => {
-        return {
-            thing,
-            properties: ListThingsProperties(thing.url)
-        }
-    });
 
     const [formValues, setFormValues] = useState<FormValues>({
         name: '',
@@ -133,7 +110,6 @@ export function SceneForm({things}: { things: any }) {
         }
     }, [formValues.actionDTO.thingId]);
 
-    // @ts-ignore
     // @ts-ignore
     return (
         <form onSubmit={handleSubmit}>

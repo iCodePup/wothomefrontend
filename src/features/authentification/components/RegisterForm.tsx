@@ -76,6 +76,7 @@ export default function RegisterForm({onSuccess}: RegisterFormProps) {
                             id="email"
                             label="Email"
                             name="email"
+                            type={"email"}
                             autoComplete="email"
                             autoFocus
                             onChange={handleInputChange}
@@ -130,7 +131,8 @@ export default function RegisterForm({onSuccess}: RegisterFormProps) {
                             fullWidth
                             name="telephone"
                             label="Telephone"
-                            type="telephone"
+                            type="phone"
+                            inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
                             id="telephone"
                             autoComplete="phone"
                             onChange={handleInputChange}

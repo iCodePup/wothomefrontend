@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7479f7e-7800-489c-8ebf-d4a68e4d599c" name="Changes" comment="post rule : done">
+      <change afterPath="$PROJECT_DIR$/src/features/scene/api/deleteRule.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/authentification/components/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/components/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/authentification/components/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/authentification/components/RegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/discoverthings/components/DiscoveredThingsDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/discoverthings/components/DiscoveredThingsDataGrid.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/homeautomation/api/updateThingProperty.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/homeautomation/api/updateThingProperty.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/scene/components/ExpressionComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/ExpressionComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/scene/components/Scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/Scene.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/scene/components/SceneDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/SceneDataGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/scene/components/SceneForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/scene/components/SceneForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/userthings/components/UserThingsDataGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/userthings/components/UserThingsDataGrid.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,32 +44,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/src/features/scene/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/fvalentin/Documents/zFValentinAutre/CN/GLG204/PROJET/WOTHome/wothomefrontend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/features/scene/api" />
+      <recent name="$PROJECT_DIR$/src/features/authentification/components" />
       <recent name="$PROJECT_DIR$/src/features/scene/components" />
       <recent name="$PROJECT_DIR$/src/features/homeautomation/api" />
-      <recent name="$PROJECT_DIR$/src/features" />
-      <recent name="$PROJECT_DIR$/src/features/homeautomation/components" />
     </key>
   </component>
   <component name="RunManager">
@@ -107,7 +117,10 @@
       <workItem from="1691593023904" duration="662000" />
       <workItem from="1692083777296" duration="38297000" />
       <workItem from="1692372093064" duration="1018000" />
-      <workItem from="1692373717064" duration="550000" />
+      <workItem from="1692373717064" duration="684000" />
+      <workItem from="1692719386082" duration="687000" />
+      <workItem from="1693206781563" duration="925000" />
+      <workItem from="1693207745661" duration="10776000" />
     </task>
     <task id="LOCAL-00001" summary="init wothome frontend">
       <created>1689260341159</created>
@@ -191,11 +204,30 @@
       <option name="project" value="LOCAL" />
       <updated>1692197431434</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="post rule : done">
+      <option name="closed" value="true" />
+      <created>1692374383714</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692374383714</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

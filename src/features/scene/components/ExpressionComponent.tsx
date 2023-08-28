@@ -70,14 +70,14 @@ const handleOperatorChange = (
         if (expression.type === "thing") {
             return {
                 ...expression,
-                thingId: undefined,
+                thingId: expression.thingId,
                 property: "",
                 value: "",
             };
         } else {
             return {
                 type: selectedType,
-                thingId: 0,
+                thingId: expression.thingId,
                 property: "",
                 value: "",
             };
@@ -88,13 +88,13 @@ const handleOperatorChange = (
             type: selectedType,
             firstExpression: {
                 type: "thing",
-                thingId: 0,
+                thingId: expression.thingId,
                 property: "",
                 value: "",
             },
             secondExpression: {
                 type: "thing",
-                thingId: 0,
+                thingId: expression.thingId,
                 property: "",
                 value: "",
             },
@@ -105,8 +105,15 @@ const handleOperatorChange = (
 const ExpressionComponent: React.FC<ExpressionProps> = ({thingsWithProperties, expression, onChange}) => {
 
     useEffect(() => {
+
+        console.log("thingsWithProperties")
+        console.log(thingsWithProperties)
+        console.log("expression")
+        console.log(expression)
         // @ts-ignore
         const selectedThing = thingsWithProperties.find(item => item.thing.id == expression.thingId);
+        console.log("selectedThing")
+        console.log(selectedThing)
         if (selectedThing) {
             expression.property = selectedThing.properties[0] || ''
         }
@@ -162,7 +169,6 @@ const ExpressionComponent: React.FC<ExpressionProps> = ({thingsWithProperties, e
                             }
                         >
                             {
-
                                 thingsWithProperties
                                     .find((item: { thing: { id: number; }; }) => {
                                         return item.thing.id == expression.thingId
@@ -172,8 +178,6 @@ const ExpressionComponent: React.FC<ExpressionProps> = ({thingsWithProperties, e
                                         {property}
                                     </option>)
                                 })
-
-
                             }
                         </select>
                     </label>
